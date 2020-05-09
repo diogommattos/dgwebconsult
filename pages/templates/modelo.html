@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block titulo %}
+	<title>Modelo</title>
+	{% endblock %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fa/fontawesome.css' %}">
+	<script src="https://kit.fontawesome.com/b4bdafe2a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+	{% block menu %}
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container">
+				  	<a class="navbar-brand"></a>
+				  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+				    <span class="navbar-toggler-icon"></span>
+				  	</button>
+
+			 	 	<div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+			    		<ul class="navbar-nav mr-auto">
+				      		<li class="nav-item active">
+		       			 		<a class="nav-link" href="{% url 'inicio' %}"><i class="fas fa-home"></i> Home<span class="sr-only">(página atual)</span></a>
+		     				</li>
+			      			<li class="nav-item">
+					        	<a class="nav-link" href="{% url 'sobre' %}"><i class="fas fa-users"></i> Sobre Nós</a>
+				      		</li>
+				      		<li class="nav-item dropdown">
+					        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-toolbox"></i> Soluções</a>
+					        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						          	<a class="dropdown-item" href="{% url 'desenvolvimento' %}">Desenvolvimento de Site</a>
+						          	<a class="dropdown-item" href="{% url 'manutencao' %}">Manutenção de Websites</a>
+						          	<a class="dropdown-item" href="{% url 'marketing' %}">Marketing Digital</a>
+						          	<a class="dropdown-item" href="{% url 'consultoria' %}">Consultoria Web</a>
+						        </div>
+				      		</li>
+				      		<li class="nav-item">
+					        	<a class="nav-link" href="{% url 'contato' %}"><i class="fas fa-envelope"></i> Contato</a>
+				      		</li>
+			      		</ul>
+				  	</div>
+			  	</div>
+			</nav>
+
+	{% endblock %}
+
+		{% block destaque %}
+			<div class="container destaque">
+				<div class="row">
+		            <div class="col-sm-12 imgdestaque">
+		              	<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+		            </div>
+		      	</div>
+	      	</div>
+	        <div class="container destaque2">
+	        	<div class="row">
+		        	<div class="col-sm-12">
+			            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque. Proin semper, nulla ac bibendum accumsan, ex risus semper sem.adipiscing Proin mollis dui sed varius scelerisquelerisque. Proin semper, nulla ac bibendum accumsan, ex risus semper sem.adipiscier sem.adipiscing elit. Proin mollis dui sed varius scelerisqueleris.</p>
+		          	</div>
+		        </div>
+			</div>
+		{% endblock %}
+
+		    {% block conteudo %}
+		    	<div class="container conteudo">
+			        <div class="row align-items-center">
+			          	<div class="col-sm-3">
+				              <i class="fas fa-chart-bar fa-10x"></i>
+				                  <h3>Suspendisse Vitae</h3>
+				                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+		              	</div>
+			          	<div class="col-sm-3">
+				              <i class="fas fa-chart-bar fa-10x"></i>
+				                  <h3>Phasellus aliquet</h3>
+				                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+		              	</div>
+			          	<div class="col-sm-3">
+								<i class="fas fa-chart-bar fa-10x"></i>
+				                  	<h3>Fusce dictum scele</h3>
+				                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+		                </div>
+			          	<div class="col-sm-3">
+			            	   <i class="fas fa-chart-bar fa-10x"></i>
+				                  	<h3>Fusce dictum scele</h3>
+				                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+		              	</div>
+		          	</div>
+	          	</div>
+
+
+			{% endblock %}
+
+		{% block rodape %}
+			<div class="footer">
+
+		            <ul>
+		              	<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+		              	<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+		              	<li><a href="#"><i class="fab fa-github"></i></a></li>
+		            </ul>
+
+
+	      	</div>
+		{% endblock %}
+	<script type="text/javascript" src="{% static 'js/jquery-3.5.0.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+</body>
+</html>
