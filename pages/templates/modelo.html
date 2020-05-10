@@ -11,13 +11,12 @@
 
 	{% endblock %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b4bdafe2a6.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'fa/fontawesome.css' %}">
-	<script src="https://kit.fontawesome.com/b4bdafe2a6.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
 
 
@@ -26,9 +25,8 @@
 </head>
 <body>
 
-
-	{% block menu %}
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+{% block menu %}
+	<nav class="navbar sticked-top navbar-expand-lg navbar-light bg-light">
 				  	<a class="navbar-brand"></a>
 				  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 				    <span class="navbar-toggler-icon"></span>
@@ -56,64 +54,67 @@
       				</ul>
 		  		</div>
 	</nav>
-	{% endblock %}
+{% endblock %}
 
- {% block destaque %}
-			<div class="container destaque">
-					<div class="row">
-		            <div class="col-sm-12 imgdestaque">
-		              	<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-		            </div>
-      		</div>
-    	</div>
-      <div class="container destaque2">
-        	<div class="row">
-		        		<div class="col-sm-12">
-			            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-			            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque. Proin semper, nulla ac bibendum accumsan, ex risus semper sem.adipiscing Proin mollis dui sed varius scelerisquelerisque. Proin semper, nulla ac bibendum accumsan, ex risus semper sem.adipiscier sem.adipiscing elit. Proin mollis dui sed varius scelerisqueleris.</p>
+{% block principal %}
+		<div class="container">
+
+			{% block destaque %}
+			<div class="destaque">
+						<div class="row">
+		            <div class="col-sm-12">
+									<img src="{% static "img/1.png" %}" alt="My image">
+								</div>
+						</div>
+					</div>
+			<div class="destaque2">
+						<div class="row">
+      		   		<div class="col-sm-12">
+			            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 		          	</div>
-	        </div>
-			</div>
-				{% endblock %}
+						</div>
+	    </div>
+			{% endblock %}
 
 
-{% block conteudo %}
-		    	<div class="container">
+			{% block conteudo %}
+					<div class="conteudo">
 			        <div class="row">
 			          	<div class="col-sm-3">
-				              <i class="fas fa-chart-bar fa-9x"></i>
+				              <i class="fas fa-laptop-code fa-9x"></i>
 				                  <h3>DESENVOLVIMENTO DE SITE</h3>
 				                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
-		              	</div>
+	              	</div>
 			          	<div class="col-sm-3">
-				              <i class="fas fa-chart-bar fa-9x"></i>
+				              <i class="fas fa-cogs fa-9x"></i>
 				                  <h3>MANUTENÇÃO DE SITES</h3>
 				                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
 		              </div>
 			          	<div class="col-sm-3">
-								<i class="fas fa-chart-bar fa-9x"></i>
-				                  	<h3>MARKETING DIGITAL</h3>
-				                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+											<i class="fas fa-share-alt fa-9x"></i>
+			                  	<h3>MARKETING DIGITAL</h3>
+			                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
 		              </div>
 			          	<div class="col-sm-3">
 			            	   <i class="fas fa-chart-bar fa-9x"></i>
-				                  	<h3>CONSULTORIA WEB</h3><br>
-				                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
+			                  	<h3>CONSULTORIA WEB</h3><br>
+			                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis dui sed varius scelerisque.</p>
 		              </div>
-		          	</div>
-	         </div>
+								</div>
+							</div>
+						{% endblock %}
+
+			{% block rodape %}
+						<section class="footer">
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+							<a href="#"><i class="fab fa-github"></i></a>
+								<p>Todos os direitos reservados - DGWEB CONSULTING © 2020 </p>
+						</section>
+
+			{% endblock %}
+	</div>
 {% endblock %}
-
-		{% block rodape %}
-					<section class="footer">
-							<ul>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-									<li><a href="#"><i class="fab fa-github"></i></a></li>
-							</ul>
-					</section>
-		{% endblock %}
-
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
