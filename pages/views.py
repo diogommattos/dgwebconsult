@@ -2,23 +2,23 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 class IndexView(TemplateView):
-    template_name = "index.html"
+    template_name = "paginas/index.html"
 
 class SobreView(TemplateView):
-    template_name = "sobre.html"
+    template_name = "paginas/sobre.html"
 
 class ContatoView(TemplateView):
-    template_name = "contato.html"
+    template_name = "paginas/contato.html"
 
 class DesenvolvimentoView(TemplateView):
-    template_name = "desenvolvimento.html"
+    template_name = "paginas/desenvolvimento.html"
 
 class ManutencaoView(TemplateView):
-    template_name = "manutencao.html"
+    template_name = "paginas/manutencao.html"
 
 class MarketingView(TemplateView):
-    template_name = "marketing.html"
+    template_name = "paginas/marketing.html"
 
 class ConsultoriaView(TemplateView):
-    template_name = "consultoria.html"
+    template_name = "paginas/consultoria.html"
     
