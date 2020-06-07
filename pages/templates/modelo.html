@@ -11,14 +11,10 @@
 	<title>Modelo</title>
 	{% endblock %}
 
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="{% static 'js/popper.min.js' %}">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/b4bdafe2a6.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'fa/fontawesome.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 
 </head>
@@ -66,33 +62,28 @@
 					</div>
 				</div>
 			</div>
-			<div class="destaque2">
-				<div class="row">
-      		   		<div class="col-sm-12">
-			            <h2>SOLUÇÕES SIMPLES PARA SITES COMPLEXOS</h2>
-		          	</div>
-				</div>
-			</div>
+			
 		{% endblock %}
+
 		{% block conteudo %}
 			<div class="conteudo">
 				<div class="row">
-					<div class="col-sm-3">
+					<div class="col-sm">
 						<a href="{% url 'desenvolvimento' %}"
 						<i class="fas fa-laptop-code fa-7x"</i><br>
 						<h3>DESENVOLVIMENTO DE SITE</h3></a>
 	              	</div>
-					<div class="col-sm-3">
+					<div class="col-sm">
 						<a href="{% url 'manutencao' %}"
 						<i class="fas fa-cogs fa-7x"></i><br>
 						<h3>MANUTENÇÃO DE SITES</h3></a>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm">
 						<a href="{% url 'marketing' %}"
 						<i class="fas fa-share-alt fa-7x"></i><br>
 						<h3>MARKETING DIGITAL</h3></a>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm">
 						<a href="{% url 'consultoria' %}"
 						<i class="fas fa-chart-bar fa-7x"></i><br>
 						<h3>CONSULTORIA WEB</h3></a>
@@ -102,22 +93,31 @@
 		{% endblock %}
 
 		{% block rodape %}
-			<section class="footer">
-				<a href="https://www.instagram.com/diogommattos/" target="_blank"><i class="fab fa-instagram"></i></a>
-				<a href="https://www.youtube.com/channel/UCKaaKYyr9xOwyPRkmR1YoxQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-				<a href="https://github.com/diogommattos" target="_blank"><i class="fab fa-github"></i></a>
-				<p>Todos os direitos reservados - DGWEB CONSULTING © 2020 </p>
-			</section>
+			<div class="col-sm footer">
+				<ul class="nav justify-content-center">
+				  <li class="nav-item">
+				    <a class="nav-link fab fa-github" href="#"></a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link fab fa-linkedin" href="#"></a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link fab fa-instagram" href="#"></a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link fab fa-youtube" href="#"></a>
+				  </li>
+				</ul>	
+				<p>Todos os direitos reservados - DGWEB CONSULTING © 2020 </p>				
+			</div>	
+		</div>		
+				
 		{% endblock %}
-	</div>
 {% endblock %}
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	
-	
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>
